@@ -1,12 +1,6 @@
 @import '../../../styles/settings.scss';
 
 .root {
-  .toolbar {
-    justify-content: space-between;
-    background-color: orangered;
-    .link {
-      text-decoration: none;
-      color: white;
-    }
-  }
+  background: $background-dark;
+  text-align: center;
 }

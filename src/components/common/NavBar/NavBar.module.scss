@@ -1,0 +1,19 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  flex-grow: 1;
+
+  .title {
+    text-transform: uppercase;
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+  }
+
+  .login {
+    position: absolute;
+    right: 0;
+  }
+}
