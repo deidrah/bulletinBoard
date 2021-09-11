@@ -12,8 +12,26 @@
     right: 0;
   }
 
+  .mobileMenu {
+    display: none;
+  }
+
   .login {
     position: absolute;
     right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .root {
+    .menu {
+      display: none;
+    }
+
+    .mobileMenu {
+      display: block;
+      position: absolute;
+      right: 0;
+    }
   }
 }

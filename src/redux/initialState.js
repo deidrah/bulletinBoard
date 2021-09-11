@@ -8,9 +8,11 @@ export const initialState = {
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et turpis a sapien luctus ullamcorper gravida vel lectus. Vivamus sed ipsum dapibus, placerat magna in, elementum erat.',
         date: '10.01.2021',
         updateDate: '13.01.2021',
+        phone: '574853242',
+        price: '$200',
         mail: 'johndoe@example.com',
         status: 'published',
-        image: '',
+        image: 'https://images.unsplash.com/photo-1607374035509-704bee7e1aa2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=882&q=80',
       },
       {
         id: '2',
@@ -18,9 +20,12 @@ export const initialState = {
         title: 'Apartment in New York for sale $1.000.000',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et turpis a sapien luctus ullamcorper gravida vel lectus. Vivamus sed ipsum dapibus, placerat magna in, elementum erat.',
         date: '14.01.2021',
+        phone: '574853242',
+        price: '$200',
         updateDate: '15.01.2021',
         mail: 'jennydoe@example.com',
         status: 'published',
+        image: 'https://images.unsplash.com/photo-1607374035509-704bee7e1aa2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=882&q=80'
       },
       {
         id: '3',
@@ -29,9 +34,11 @@ export const initialState = {
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et turpis a sapien luctus ullamcorper gravida vel lectus. Vivamus sed ipsum dapibus, placerat magna in, elementum erat.',
         date: '20.01.2020',
         updateDate: '21.02.2020',
+        phone: '574853242',
+        price: '$200',
         mail: 'jessicadoe@example.com',
         status: 'published',
-        image: '',
+        image: 'https://images.unsplash.com/photo-1607374035509-704bee7e1aa2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=882&q=80',
       },
       {
         id: '4',
@@ -40,9 +47,11 @@ export const initialState = {
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et turpis a sapien luctus ullamcorper gravida vel lectus. Vivamus sed ipsum dapibus, placerat magna in, elementum erat.',
         date: '10.01.2021',
         updateDate: '13.01.2021',
+        phone: '574853242',
+        price: '$200',
         mail: 'johndoe@example.com',
         status: 'published',
-        image: '',
+        image: 'https://images.unsplash.com/photo-1607374035509-704bee7e1aa2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=882&q=80',
       },
       {
         id: '5',
@@ -51,9 +60,11 @@ export const initialState = {
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et turpis a sapien luctus ullamcorper gravida vel lectus. Vivamus sed ipsum dapibus, placerat magna in, elementum erat.',
         date: '20.01.2020',
         updateDate: '21.02.2020',
+        phone: '574853242',
+        price: '$200',
         mail: 'jessicadoe@example.com',
         status: 'published',
-        image: '',
+        image: 'https://images.unsplash.com/photo-1607374035509-704bee7e1aa2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=882&q=80',
       },
     ],
     loading: {
@@ -61,9 +72,8 @@ export const initialState = {
       error: false,
     },
   },
-  users: [
-    { id: '1', mail: 'johndoe@example.com' },
-    { id: '2', mail: 'jennydoe@example.com' },
-    { id: '3', mail: 'jessicadoe@example.com' },
-  ],
+  user: {
+    id: '',
+    logged: true,
+  },
 };

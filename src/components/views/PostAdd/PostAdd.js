@@ -38,7 +38,6 @@ const Component = ({ className, addPost }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log('Submitted');
     await addPost(post);
   };
 
@@ -49,8 +48,6 @@ const Component = ({ className, addPost }) => {
     });
   };
 
-  // console.log('post', post);
-
   return (
     <div className={clsx(className, styles.root)}>
       <Container maxWidth="lg">
@@ -60,6 +57,7 @@ const Component = ({ className, addPost }) => {
             <TextField
               id="title"
               label="Title"
+              overflow="auto"
               required
               inputProps={titleProps}
               value={post.title}
@@ -69,13 +67,23 @@ const Component = ({ className, addPost }) => {
               id="price"
               label="Price"
               type="number"
+              overflow="auto"
               value={post.price}
               onChange={e => handleChange(e, 'price')}
+            />
+            <input
+              accept="image/*"
+              className={styles.input}
+              id="upload-photo"
+              multiple
+              type="file"
+              onChange={e => handleChange(e, 'image')}
             />
             <TextField
               variant="outlined"
               multiline
               id="content"
+              overflow="auto"
               inputProps={contentProps}
               label="Content"
               placeholder="Write your post here"
@@ -83,11 +91,11 @@ const Component = ({ className, addPost }) => {
               required
               value={post.content}
               onChange={e => handleChange(e, 'content')}
-
             />
             <TextField
               id="mail"
               label="E-mail"
+              overflow="auto"
               type="email"
               required
               value={post.mail}
@@ -97,6 +105,7 @@ const Component = ({ className, addPost }) => {
               id="phone"
               label="Phone number"
               type="number"
+              overflow="auto"
               value={post.phone}
               onChange={e => handleChange(e, 'phone')}
             />

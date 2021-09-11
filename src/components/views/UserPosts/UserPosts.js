@@ -12,15 +12,16 @@ import Button from '@material-ui/core/Button';
 import clsx from 'clsx';
 
 import { connect } from 'react-redux';
-import { getAll, loadPostsRequest } from '../../../redux/postsRedux.js';
+import { getAll } from '../../../redux/postsRedux.js';
 import { getUser } from '../../../redux/userRedux';
 
-import styles from './Homepage.module.scss';
+import styles from './UserPosts.module.scss';
 
 class Component extends React.Component {
 
   static propTypes = {
     className: PropTypes.string,
+    children: PropTypes.node,
     posts: PropTypes.array,
     loadPosts: PropTypes.func,
     user: PropTypes.object,
@@ -31,7 +32,7 @@ class Component extends React.Component {
   // }
 
   render() {
-    const { className, posts, user } = this.props;
+    const { className, children, posts, user } = this.props;
 
     return (
       <div className={clsx(className, styles.root)}>
@@ -44,7 +45,7 @@ class Component extends React.Component {
             : ''
           }
 
-          {posts.map(el => (
+          {posts.filter(el => el.userId === user.id).map(el => (
             <Card key={el.id} className={styles.card}>
               <CardHeader title={el.title} subheader={`${el.date}/${el.updateDate}`} />
               <CardActions className={styles.link}>
@@ -54,7 +55,9 @@ class Component extends React.Component {
               </CardActions>
             </Card>
           ))}
+
         </Container>
+        {children}
       </div>
     );
   }
@@ -65,14 +68,14 @@ const mapStateToProps = state => ({
   user: getUser(state),
 });
 
-const mapDispatchToProps = (dispatch, state) => ({
-  loadPosts: () => dispatch(loadPostsRequest(state)),
-});
+// const mapDispatchToProps = (dispatch, state) => ({
+//   loadPosts: () => dispatch(loadPostsRequest(state)),
+// });
 
-const HomepageContainer = connect(mapStateToProps, mapDispatchToProps)(Component);
+const UserPostsContainer = connect(mapStateToProps)(Component);
 
 export {
-  // Component as Homepage,
-  HomepageContainer as Homepage,
-  Component as HomepageComponent,
+  // Component as UserPosts,
+  UserPostsContainer as UserPosts,
+  Component as UserPostsComponent,
 };

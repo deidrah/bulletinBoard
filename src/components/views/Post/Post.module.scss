@@ -1,4 +1,54 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+  .card {
+    margin: 10px;
+    padding: 15px;
+
+    .title {
+      flex: 4 1 40%;
+    }
+
+    .price {
+      min-width: 100px;
+      justify-content: center;
+      margin: 16px;
+      flex: 1 1 20%;
+
+      > label {
+        transform: none;
+      }
+    }
+
+    .image {
+      max-width: 200px;
+      flex: 1 1 20%;
+    }
+
+    .contentWrapper {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+
+      .content {
+        margin-bottom: 15px;
+      }
+
+      .status {
+        margin: 10px 0;
+        text-transform: lowercase;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .root {
+    .card {
+      .image {
+        margin: 0 auto;
+      }
+    }
+  }
+}
