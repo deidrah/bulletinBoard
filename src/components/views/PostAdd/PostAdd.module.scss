@@ -1,4 +1,27 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+  margin: 20px;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      margin: 15px;
+
+      > div {
+        margin: 5px;
+      }
+
+      .button {
+        margin: 3px;
+      }
+    }
+  }
+}

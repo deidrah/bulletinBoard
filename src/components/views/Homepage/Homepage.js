@@ -17,7 +17,7 @@ import styles from './Homepage.module.scss';
 const Component = ({ className, children, posts }) => (
   <div className={clsx(className, styles.root)}>
     <Container maxWidth="lg">
-      <Fab color="secondary" aria-label="add" className={styles.button}>
+      <Fab color="secondary" aria-label="add" href="/post/add" className={styles.button}>
         <AddIcon />
       </Fab>
 
