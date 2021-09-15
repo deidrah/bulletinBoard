@@ -26,9 +26,9 @@ class Component extends React.Component {
     user: PropTypes.object,
   }
 
-  // componentDidMount() {
-  //   this.props.loadPosts();
-  // }
+  componentDidMount() {
+    this.props.loadPosts();
+  }
 
   render() {
     const { className, posts, user } = this.props;
@@ -48,7 +48,7 @@ class Component extends React.Component {
             <Card key={el.id} className={styles.card}>
               <CardHeader title={el.title} subheader={`${el.date}/${el.updateDate}`} />
               <CardActions className={styles.link}>
-                <Button size="small" color="secondary" variant="contained" href={`/posts/${el.id}`}>
+                <Button size="small" color="secondary" variant="contained" href={`/posts/${el._id}`}>
                   Show details
                 </Button>
               </CardActions>

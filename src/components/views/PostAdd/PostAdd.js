@@ -6,6 +6,7 @@ import Card from '@material-ui/core/Card';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CardHeader from '@material-ui/core/CardHeader';
+import {useHistory} from 'react-router-dom';
 
 import clsx from 'clsx';
 import shortid from 'shortid';
@@ -16,7 +17,7 @@ import { getAll, addPost } from '../../../redux/postsRedux.js';
 import styles from './PostAdd.module.scss';
 
 const Component = ({ className, addPost }) => {
-
+const history = useHistory();
   const today = new Date();
   const day = today.getDate();
   const month = today.getMonth();
@@ -39,6 +40,7 @@ const Component = ({ className, addPost }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await addPost(post);
+    history.push('/');
   };
 
   const handleChange = async (event, name) => {
